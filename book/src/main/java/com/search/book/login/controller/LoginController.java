@@ -9,6 +9,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping(value = "login")
 public class LoginController {
 
+	@RequestMapping("/hi")
+	public String login(Model model) {
+		
+		model.addAttribute("msg", "Hello World");
+		
+		return "index";
+	}
+	
 	@GetMapping("")
 	public String login(Model model, String error, String logout) {
 		
